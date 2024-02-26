@@ -21,4 +21,4 @@ const storyTellingSchema = new Schema({
 }
 )
 
-module.exports = mongoose.model('storyTelling',storyTellingSchema)
+module.exports = mongoose.model('storyTellers',storyTellingSchema)

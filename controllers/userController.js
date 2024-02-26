@@ -18,6 +18,7 @@ module.exports = {
             if(result){
                 await userHelper.postWriter(req.body,result).then((ress)=>{
                     if(ress){
+                        console.log(ress,"responses");
                         res.status(200).json({message:"successfully added your story"})
                     }else{
                         res.status(404).json({message:"something went wrong!!"})
@@ -67,9 +68,9 @@ module.exports = {
     postSubscription_request : async(req,res)=>{
         try {
             console.log(req.body,"daaaata");
-            userHelper.subscribe(req.body).then((data)=>{
+            await userHelper.subscribe(req.body).then((data)=>{
                 if(data.error){
-                    res.status(500).json({message:"somthing went wrong!please try again later!!"})
+                    res.status(500).json({message:"something went wrong!please try again later!!"})
                 }else{
                     res.status(200).json({message:"successfully subscribed"})
                 }

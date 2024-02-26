@@ -12,6 +12,7 @@ router.post('/story_writer',upload.single('source'),userController.postStory_wri
 router.post('/story_teller',upload.single('file'),userController.postStory_teller)
 router.post('/get_in_touch',userController.postGetInTouch)
 router.post('/subscription',userController.postSubscription_request)
+
 // router.post('/memebership',userController.signup)
 router.post
 
