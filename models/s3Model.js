@@ -8,7 +8,7 @@ AWS.config.update({
 
 const s3 = new AWS.S3();
 const bucketName = 'storyclub';
-
+//sample
 module.exports = {
   uploadFile: async (file) => {
     const source = file   
