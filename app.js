@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
   origin: [
     'http://localhost:5173',
+    'http://localhost:5174',
     'https://story-club-frontend.vercel.app'
   ], // Update with your client's origin
   methods: ["GET", "POST", "PUT", "DELETE"],

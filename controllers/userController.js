@@ -88,6 +88,25 @@ module.exports = {
             console.log(error);
             res.status(500).json({message:"internal server occured!"})
         }
+    },
+
+    getStroyWriters:async(req,res)=>{
+        try {
+            userHelper.getStroyWriters().then((data)=>{
+                if(data){
+                    res.status(200).json({message:"featured stories here!!"})
+                }else{
+                    res.json({message:"stories are not available now!!"})
+                }
+                
+                if(data.error){
+                    res.status(500).json({message:"something went wrong!!"})
+                }
+            })
+
+        } catch (error) {
+            res.status(500).json({message:"internal error occured!!"})
+        }
     }
 
     

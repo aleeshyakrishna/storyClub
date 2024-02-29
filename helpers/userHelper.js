@@ -89,6 +89,21 @@ module.exports = {
             console.log(error);
             return({error:true})
         }
+    },
+
+    getStroyWriters:async()=>{
+        try {
+            //data base 
+            return new Promise(async(resolve,reject)=>{
+                const data = await writer.find()
+                console.log(data,"oooiioo");
+                resolve(data)
+            }).catch((error)=>{
+                reject(error)
+            })
+        } catch (error) {
+            return ({error:true})
+        }
     }
 
 }
